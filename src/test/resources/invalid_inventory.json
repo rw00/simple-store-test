@@ -1,0 +1,14 @@
+{
+  "inventory": [
+    {
+      "art_id": "0",
+      "name": "leg",
+      "stock": "-1"
+    },
+    {
+      "art_id": "2",
+      "name": " ",
+      "stock": "17"
+    }
+  ]
+}

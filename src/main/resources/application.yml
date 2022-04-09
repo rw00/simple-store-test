@@ -1,0 +1,31 @@
+logging.level:
+  root: INFO
+
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:APP-DB
+    username: root
+    password: root # TODO change pass
+  jpa:
+    hibernate:
+      ddlAuto: none
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    placeholder-replacement: false
+    url: jdbc:h2:mem:APP-DB;DB_CLOSE_DELAY=-1
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+  h2:
+    console:
+      enabled: true # disable on prod
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 5MB
+      max-file-size: 5MB
+
+server:
+  error:
+    include-stacktrace: ALWAYS # disable on prod
